@@ -1,0 +1,26 @@
+//Atividade: Organize um vetor de forma crescente.
+
+
+#include <stdio.h>
+#define tam 3
+
+int main () {
+	
+	int vetor[] = {3, -2, 1, 0};
+	int controle;
+	int idc;
+	int idc1;
+	
+	for(idc = 0; idc < tam -1; idc++){
+		for (idc1 = 1; idc1 < tam; idc1++) {
+			if (vetor[idc] >  vetor[idc1]) {
+				controle = vetor[idc];
+				vetor[idc] = vetor[idc1];
+				vetor[idc1] = controle;
+			}
+		}
+	}
+	for (idc = 0; idc < tam; idc++){
+		printf("%d", vetor[idc]);
+	}
+}
